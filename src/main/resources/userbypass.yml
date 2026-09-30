@@ -1,0 +1,7 @@
+# RoGuard - RoCordXDDDD
+# RoGuard Bypass Configuration
+
+permanent-bypass:
+  - "Owner"
+
+temp-bypass: []

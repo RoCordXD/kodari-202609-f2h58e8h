@@ -1,0 +1,18 @@
+# RoGuard - RoCordXDDDD
+# RoGuard Player 2FA Configuration
+# This is a SEPARATE bot for player 2FA (not staff 2FA)
+
+# Bot token for player 2FA
+bot-token: "YOUR_2FA_BOT_TOKEN_HERE"
+
+# Channel where players send their 6-digit link code
+link-channel-id: "000000000000000000"
+
+# Channel to log successful Discord links
+link-log-channel-id: "000000000000000000"
+
+# Code expiration time in seconds
+code-expire-time: 300
+
+# Enable/disable player 2FA system
+enabled: true

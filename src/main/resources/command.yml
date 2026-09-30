@@ -1,0 +1,35 @@
+# RoGuard - RoCordXDDDD
+# RoGuard Restricted Commands
+
+restricted-commands:
+  - "op"
+  - "deop"
+  - "eco"
+  - "stop"
+  - "ban"
+  - "kick"
+  - "whitelist"
+  - "gamemode"
+  - "give"
+  - "tp"
+  - "lp"
+  - "perm"
+  - "//"
+
+bypass-plugin-prefixes:
+  - "deluxemenus"
+  - "citizens"
+  - "npc"
+  - "denizen"
+  - "commandnpc"
+  - "axafkzone"
+  - "axafk"
+
+# ==================== SHOPKEEPER PROTECTION ====================
+# Require Discord verification when a player shift+right-clicks
+# a Shopkeeper to open the trade editor
+
+shopkeeper-protection:
+  enabled: true
+  # How long (in seconds) the player can edit after being approved
+  bypass-duration: 60

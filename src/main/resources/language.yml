@@ -1,0 +1,327 @@
+# RoGuard Language Configuration
+# Use & for color codes
+# Use Discord emoji format for Discord messages: <:name:id> or <a:name:id>
+
+prefix: "&b[RoGuard] &f"
+
+# ==================== AUTH ====================
+auth:
+  register-success: "&aRegistration successful! You can now play."
+  register-usage: "&cUsage: /register <password> <password>"
+  register-password-mismatch: "&cPasswords do not match!"
+  register-already: "&cYou are already registered!"
+  register-password-too-short: "&cPassword must be at least 6 characters!"
+
+  login-success: "&aLogin successful! Welcome back."
+  login-usage: "&cUsage: /login <password>"
+  login-wrong-password: "&cWrong password!"
+  login-not-registered: "&cNo account found. Rejoin to create one."
+  login-already: "&aYou are already logged in!"
+
+  changepass-success: "&aPassword changed successfully!"
+  changepass-usage: "&cUsage: /changepassword <old> <new>"
+  changepass-wrong: "&cOld password is incorrect!"
+  changepass-same: "&cNew password must be different!"
+  changepass-too-short: "&cNew password must be at least 6 characters!"
+
+  unregister-success: "&aPlayer %player% has been unregistered."
+  unregister-not-found: "&cPlayer %player% is not registered."
+  unregister-usage: "&cUsage: /unregister <player>"
+
+  prompt-register: "&ePlease create a password in the form on your screen."
+  prompt-login: "&ePlease enter your password in the form on your screen."
+
+  title-register: "&b&lREGISTER"
+  title-register-subtitle: "&fUse &e/register <password> <password>"
+  title-login: "&a&lLOGIN"
+  title-login-subtitle: "&fUse &e/login <password>"
+
+  kick-not-logged-in: "&cYou did not login in time!"
+  kick-too-many-attempts: "&cToo many failed login attempts!"
+
+# ==================== 2FA ====================
+2fa:
+  start-usage: "&cUsage: /2fa <start|disable>"
+  start-already-linked: "&cYour account is already linked to Discord!"
+  start-not-logged-in: "&cYou must be logged in to use this!"
+  start-code-sent: "&aYour link code: &e%code%"
+  start-code-expire: "&7Code expires in 5 minutes."
+
+  link-success: "&aDiscord account linked successfully!"
+  link-kick: "&aAccount linked! Please rejoin to verify."
+
+  verify-required: "&e2FA verification required. Check your Discord DMs!"
+  verify-success: "&a2FA verified! You can now play."
+  verify-denied: "&cVerification denied!"
+  verify-expired: "&cVerification expired! Please rejoin."
+
+  title-required: "&6&l2FA VERIFICATION"
+  title-required-subtitle: "&fCheck your Discord DMs and press Verify"
+  title-success: "&a&lVERIFIED"
+  title-success-subtitle: "&fYou can now play"
+
+  disable-success: "&a2FA has been disabled."
+  disable-not-linked: "&cYou don't have 2FA enabled."
+
+  disabled: "&c2FA system is currently disabled."
+
+# ==================== SECURITY ====================
+security:
+  command-blocked: "&cThis command is restricted."
+  command-verify-required: "&cThis command requires Discord verification."
+  command-approved: "&aCommand approved and executed."
+  command-denied: "&cCommand denied."
+  command-expired: "&cCommand verification expired."
+
+  shopkeeper-verify-required: "&cEditing this shopkeeper requires Discord verification."
+  shopkeeper-approved: "&aApproved! You can now edit shopkeepers for 60 seconds."
+  shopkeeper-denied: "&cShopkeeper edit denied."
+
+  vpn-kick: "&cVPN/Proxy detected! Please disable it to join."
+
+  antibot-kick: "&cBot activity detected! Connection refused."
+
+  no-permission: "&cYou don't have permission!"
+
+  auto-deop: "&eYou have been deopped automatically."
+
+# ==================== GENERAL ====================
+general:
+  config-reloaded: "&aConfiguration reloaded!"
+  settings-saved: "&aSettings saved successfully!"
+  dialog-unsupported: "&cDialogs require Paper 1.21.7 or newer."
+  config-reload-failed: "&cFailed to reload configuration!"
+  player-not-found: "&cPlayer not found!"
+  must-be-player: "&cThis command can only be used by players!"
+  unknown-command: "&cUnknown subcommand. Use /roguard for help."
+  plugin-enabled: "&aRoGuard has been enabled!"
+  plugin-disabled: "&cRoGuard has been disabled."
+
+# ==================== DIALOG LABELS ====================
+# Text shown inside the login, register and settings forms.
+# Use & for color codes.
+
+dialog:
+  # ---- Login form ----
+  login-title: "&a&lLOGIN"
+  login-welcome: "&7Welcome back, &b%player%"
+  login-password-label: "&aPassword"
+  login-button: "&aLogin"
+  login-button-tooltip: "Click to log in"
+
+  # ---- Register form ----
+  register-title: "&b&lREGISTER"
+  register-welcome: "&7Create an account for &b%player%"
+  register-hint: "&8Minimum %min% characters."
+  register-password-label: "&aPassword"
+  register-confirm-label: "&aConfirm"
+  register-button: "&bRegister"
+  register-button-tooltip: "Click to create your account"
+
+  # ---- Settings form ----
+  settings-title: "&bRoGuard Settings"
+  settings-description: "&7Toggle features, then press Save."
+  settings-save: "&aSave"
+  settings-save-tooltip: "Apply and write to the config files"
+  settings-cancel: "&cCancel"
+  settings-cancel-tooltip: "Discard changes"
+
+  # Feature switch labels
+  feature-command-verification: "Command Verification"
+  feature-staff-2fa: "Staff 2FA"
+  feature-command-log: "Command Log"
+  feature-console-mirror: "Console Mirror"
+  feature-auto-deop: "Auto DeOp"
+  feature-anti-vpn: "Anti-VPN"
+  feature-anti-bot: "Anti-Bot"
+  feature-auth: "Auth System"
+  feature-player-2fa: "Player 2FA"
+
+# ==================== PLAYER MANAGER ====================
+# %player% = player name, %value% = stat value
+# %count% %page% %total% are available in list-info
+
+playermanager:
+  list-title: "&b&lPLAYER MANAGER"
+  list-info: "&7Players: &f%count%   &7Page: &f%page%/%total%"
+  search-label: "&aSearch name"
+  search-button: "&bSearch"
+  search-button-tooltip: "Filter the list by the name above"
+  no-results: "&7No players found"
+  online-prefix: "&a● "
+  offline-prefix: "&7● "
+  open-player-tooltip: "Click to manage this player"
+  next-page: "&fNext"
+  previous-page: "&fPrevious"
+
+  player-title: "&bManage: &f%player%"
+  player-info: "&7Player: &b%player%   &7Status: %status%"
+  status-online: "&aOnline"
+  status-offline: "&7Offline"
+
+  stat-playtime: "&ePlaytime: &f%value%"
+  stat-kills: "&cPlayer Kills: &f%value%"
+  stat-deaths: "&4Deaths: &f%value%"
+  stat-mined: "&6Blocks Mined: &f%value%"
+  stat-mobkills: "&dMob Kills: &f%value%"
+
+  open-inventory: "&aOpen Inventory"
+  open-inventory-tooltip: "Edit this player's inventory live"
+  back: "&7Back"
+
+  inventory-title: "Inventory: %player%"
+  inventory-title-offline: "Offline: %player%"
+  enderchest-title: "Ender Chest: %player%"
+  no-snapshot: "&cNo saved inventory found for this player yet."
+  inventory-updated: "&eAn administrator modified your inventory while you were offline."
+  ender-offline: "&cThat player must be online to open their ender chest."
+
+  open-enderchest: "&5Open Ender Chest"
+  open-enderchest-tooltip: "Edit this player's ender chest"
+  clear-inventory: "&cClear Inventory"
+  clear-inventory-tooltip: "Delete every item this player carries"
+  clear-warning: "&cThis cannot be undone."
+  form-clear-title: "&c&lCLEAR INVENTORY"
+  form-clear-info: "&7You are clearing the inventory of &b%player%&7."
+  applied-clear: "&aCleared the inventory of &f%player%"
+
+  # ---- Punishment buttons ----
+  ban: "&cBan"
+  ban-tooltip: "Permanently ban this player"
+  tempban: "&6Temp Ban"
+  tempban-tooltip: "Ban this player for a set time"
+  banip: "&4Ban IP"
+  banip-tooltip: "Permanently ban this player's IP"
+  tempbanip: "&cTemp Ban IP"
+  tempbanip-tooltip: "Ban this player's IP for a set time"
+  mute: "&eMute"
+  mute-tooltip: "Permanently mute this player"
+  tempmute: "&6Temp Mute"
+  tempmute-tooltip: "Mute this player for a set time"
+  unban: "&aUnban"
+  unban-tooltip: "Remove the ban from this player"
+  unmute: "&aUnmute"
+  unmute-tooltip: "Remove the mute from this player"
+
+  is-banned: "&cThis player is banned."
+  is-muted: "&eMuted: &f%reason%"
+
+  # ---- Punishment forms ----
+  reason-label: "&cReason"
+  duration-label: "&6Duration"
+  duration-hint: "&8Examples: 30m, 2h, 7d, 1w, 1d12h"
+  default-reason: "No reason provided"
+  default-duration: "1d"
+  confirm: "&aConfirm"
+  cancel: "&7Cancel"
+
+  form-ban-title: "&c&lBAN PLAYER"
+  form-ban-info: "&7You are banning &b%player%&7."
+  form-tempban-title: "&6&lTEMPORARY BAN"
+  form-tempban-info: "&7You are temporarily banning &b%player%&7."
+  form-banip-title: "&4&lBAN IP"
+  form-banip-info: "&7You are banning the IP of &b%player%&7."
+  form-tempbanip-title: "&c&lTEMPORARY IP BAN"
+  form-tempbanip-info: "&7You are temporarily banning the IP of &b%player%&7."
+  form-mute-title: "&e&lMUTE PLAYER"
+  form-mute-info: "&7You are muting &b%player%&7."
+  form-tempmute-title: "&6&lTEMPORARY MUTE"
+  form-tempmute-info: "&7You are temporarily muting &b%player%&7."
+
+  # ---- Punishment results ----
+  applied-ban: "&aBanned &f%player% &7- &f%reason%"
+  applied-tempban: "&aBanned &f%player% &7for &f%time% &7- &f%reason%"
+  applied-banip: "&aIP banned &f%player% &7- &f%reason%"
+  applied-tempbanip: "&aIP banned &f%player% &7for &f%time% &7- &f%reason%"
+  applied-mute: "&aMuted &f%player% &7- &f%reason%"
+  applied-tempmute: "&aMuted &f%player% &7for &f%time% &7- &f%reason%"
+  applied-unban: "&aUnbanned &f%player%"
+  applied-unmute: "&aUnmuted &f%player%"
+
+  invalid-duration: "&cInvalid duration. Use formats such as 30m, 2h or 7d."
+  no-ip: "&cNo known IP address for this player."
+
+# ==================== PUNISHMENT SCREENS ====================
+punishment:
+  ban-screen: "&c&lYOU ARE BANNED\n\n&fReason: &7%reason%"
+  tempban-screen: "&c&lYOU ARE TEMPORARILY BANNED\n\n&fReason: &7%reason%\n&fExpires in: &7%time%"
+  muted: "&cYou are muted. &7Reason: %reason%"
+  muted-temp: "&cYou are muted for &f%time%&c. &7Reason: %reason%"
+
+# ==================== DISCORD MESSAGES ====================
+# These are used in Discord embeds and messages
+# You can use server emojis: <:emojiname:emojiid>
+# You can use animated emojis: <a:emojiname:emojiid>
+# Standard Discord emojis also work: :skull: :trophy: etc.
+#
+# How to get emoji ID:
+# Type \:emojiname: in Discord chat
+# It will show <:emojiname:123456789> - copy the full format
+
+discord:
+  # Server status
+  server-start: "Server is now **online**! :green_circle:"
+  server-stop: "Server is now **offline**. :red_circle:"
+
+  # Player events
+  player-join: "**%player%** joined the server"
+  player-leave: "**%player%** left the server"
+  player-death: ":skull: %message%"
+  player-advancement: ":trophy: **%player%** has made the advancement **%advancement%**"
+
+  # Discord to Minecraft chat format
+  discord-to-mc: "&9[Discord] &b%player% &f> &f%message%"
+
+  # Command verification embeds
+  verify-title: "Command Verification"
+  verify-description: ""
+  verify-approved-title: "Approved"
+  verify-denied-title: "Denied"
+  verify-expired-msg: "Expired or already processed."
+
+  # Staff 2FA embeds
+  staff-2fa-title: "Staff 2FA Verification"
+  staff-2fa-description: "Login detected for your staff account."
+  staff-2fa-verified-title: "Verified"
+  staff-2fa-denied-title: "Denied"
+
+  # Player 2FA embeds
+  player-2fa-title: "Login Verification"
+  player-2fa-description: "A login was detected for your linked account."
+  player-2fa-verified-title: "Verified"
+  player-2fa-verified-description: "You can now play on the server."
+  player-2fa-denied-title: "Denied"
+  player-2fa-denied-description: "Login denied. Player kicked."
+
+  # Link embeds
+  link-success-title: "Account Linked!"
+  link-log-title: "New Account Link"
+  link-invalid-code: "Invalid or expired code!"
+
+  # Command log
+  cmd-log-player-label: "Player"
+  cmd-log-command-label: "Command"
+
+  # VPN log
+  vpn-title: "VPN/Proxy Detected"
+  vpn-player-label: "Player"
+  vpn-ip-label: "IP"
+  vpn-reason-label: "Reason"
+
+  # Console
+  console-executed: "[Executed]"
+  console-pending: "[Pending]"
+
+  # IP response
+  ip-title: "Server Information"
+
+  # Online players
+  online-title: "Online Players"
+  online-no-players: "No players online."
+  online-footer: "Online: %online%/%max%"
+
+  # Button labels
+  btn-approve: "Approve"
+  btn-deny: "Deny"
+  btn-verify: "Verify"
+  btn-deny-2fa: "Deny (Not Me!)"

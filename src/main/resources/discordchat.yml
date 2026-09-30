@@ -1,0 +1,14 @@
+# RoGuard - RoCordXDDDD
+# RoGuard Chat Bot Configuration
+
+chat-bot-token: "YOUR_CHAT_BOT_TOKEN_HERE"
+
+mc-chat-channel-id: "000000000000000000"
+mc-chat-webhook-url: "YOUR_WEBHOOK_URL_HERE"
+
+server-ip: "play.yourserver.com"
+
+ip-response:
+  - ":ghost: IP: play.yourserver.com"
+  - ":globe_with_meridians: Port: 25565"
+  - ":video_game: Version: 1.21.x"

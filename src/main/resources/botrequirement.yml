@@ -1,0 +1,32 @@
+# RoGuard - RoCordXDDDD
+# RoGuard Bot Permissions Requirements
+
+security-bot:
+  intents:
+    - "MESSAGE CONTENT INTENT"
+    - "SERVER MEMBERS INTENT"
+  permissions:
+    - "Send Messages"
+    - "Embed Links"
+    - "Read Message History"
+    - "Use External Emojis"
+
+chat-bot:
+  intents:
+    - "MESSAGE CONTENT INTENT"
+  permissions:
+    - "Send Messages"
+    - "Embed Links"
+    - "Read Message History"
+    - "Use External Emojis"
+    - "Manage Webhooks"
+
+2fa-bot:
+  intents:
+    - "MESSAGE CONTENT INTENT"
+    - "SERVER MEMBERS INTENT"
+  permissions:
+    - "Send Messages"
+    - "Embed Links"
+    - "Read Message History"
+    - "Manage Messages"

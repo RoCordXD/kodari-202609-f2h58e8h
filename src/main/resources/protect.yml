@@ -1,0 +1,67 @@
+# RoGuard - RoCordXDDDD
+# RoGuard Security Configuration
+
+security-bot-token: "YOUR_SECURITY_BOT_TOKEN_HERE"
+
+features:
+  command-verification: false
+  staff-2fa: false
+  command-log: false
+  console-mirror: false
+  auto-deop: false
+  anti-vpn: false
+
+verify-history-channel-id: "000000000000000000"
+command-log-channel-id: "000000000000000000"
+console-channel-id: "000000000000000000"
+ip-log-channel-id: "000000000000000000"
+
+verify-timeout: 60
+
+anti-vpn:
+  kick-message: "&cVPN/Proxy detected! Please disable it to join."
+  bypass-players:
+    - "Owner"
+
+# ==================== ANTI-BOT ====================
+
+anti-bot:
+  enabled: true
+  kick-message: "&cBot activity detected! Connection refused."
+
+  # Global: max joins within the window before all new joins are blocked
+  max-joins: 8
+  window-seconds: 10
+
+  # Max joins from the same IP within the window
+  same-ip-max-joins: 3
+
+  # Max different accounts allowed from one IP (session)
+  same-ip-max-accounts: 3
+
+  # Block names that look like bots (name + 3+ digits, keyboard smash)
+  name-check: true
+
+  # Detect bot groups using the same prefix followed by '-' or '_' and
+  # different random text, for example: Attack-a7Qx, Attack-P9k2, Attack-zX81.
+  prefix-pattern:
+    enabled: true
+    # Block when this many unique suffixes use the same prefix in the window.
+    threshold: 3
+    window-seconds: 15
+    min-prefix-length: 3
+    min-suffix-length: 3
+
+  # Players exempt from anti-bot
+  bypass-players:
+    - "Owner"
+
+# ==================== PLAYER MANAGER ====================
+
+player-manager:
+  # Allow an admin to open their own inventory through /roguard playermanager
+  allow-self-inventory: false
+
+# ==================== DISCORD CONSOLE ACCESS ====================
+# Empty list = anyone in the console channel can run commands
+console-allowed-user-ids: []

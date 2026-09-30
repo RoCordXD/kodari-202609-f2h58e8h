@@ -1,0 +1,9 @@
+# RoGuard - RoCordXDDDD
+# RoGuard Blocked Commands
+
+blocked-commands:
+  - "plugman"
+  - "reload"
+  - "restart"
+  - "rl"
+  - "bukkit:reload"

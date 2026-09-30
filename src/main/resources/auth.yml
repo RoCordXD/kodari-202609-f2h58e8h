@@ -1,0 +1,28 @@
+# RoGuard - RoCordXDDDD
+# RoGuard Auth Configuration
+
+# Enable auth system
+enabled: true
+
+# Show the login/register form on the vanilla loading screen instead of
+# letting the player enter the world first. Requires Paper 1.21.7+.
+dialog-enabled: true
+
+# Minimum password length
+min-password-length: 6
+
+# Login timeout in seconds (kick if not logged in)
+login-timeout: 60
+
+# Max login attempts before kick
+max-login-attempts: 5
+
+# Skip password login after a quick reconnect from the same IP.
+# Keep false if every connection must show the LOGIN title.
+session-enabled: false
+
+# Session timeout in minutes when session-enabled is true
+session-timeout: 30
+
+# Commands allowed before login (auth is handled by the dialog)
+allowed-commands: []

@@ -1,0 +1,7 @@
+# RoGuard - RoCordXDDDD
+# RoGuard Staff 2FA Configuration
+
+staff:
+  ExampleStaff:
+    DiscordID: "000000000000000000"
+    MinecraftName: "ExampleStaff"
